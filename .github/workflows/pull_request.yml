@@ -1,0 +1,14 @@
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  mensaje-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje PR
+        run: echo "Pull request detectado"

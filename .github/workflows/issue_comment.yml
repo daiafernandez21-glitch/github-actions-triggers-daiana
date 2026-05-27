@@ -1,0 +1,14 @@
+name: Issue Comment Workflow
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  comentario-pr:
+    if: github.event.issue.pull_request
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar comentario PR
+        run: echo "Comentario en PR detectado"

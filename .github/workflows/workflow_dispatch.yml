@@ -18,4 +18,6 @@ jobs:
 
     steps:
       - name: Mostrar alerta
-        run: echo Nivel seleccionado: ${{ inputs.alerta }}
+       steps:
+  - name: Mostrar alerta
+    run: "echo Nivel seleccionado: ${{ inputs.alerta }}"

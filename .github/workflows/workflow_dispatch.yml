@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       alerta:
-        description: 'Nivel de alerta'
+        description: Nivel de alerta
         required: true
         type: choice
         options:
@@ -18,4 +18,4 @@ jobs:
 
     steps:
       - name: Mostrar alerta
-        run: echo "Nivel seleccionado: ${{ github.event.inputs.alerta }}"
+        run: echo Nivel seleccionado: ${{ inputs.alerta }}

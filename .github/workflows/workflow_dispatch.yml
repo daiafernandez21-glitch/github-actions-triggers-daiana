@@ -1,0 +1,21 @@
+name: Workflow Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      alerta:
+        description: 'Nivel de alerta'
+        required: true
+        type: choice
+        options:
+          - baja
+          - media
+          - alta
+
+jobs:
+  mensaje-dispatch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar alerta
+        run: echo "Nivel seleccionado: ${{ github.event.inputs.alerta }}"

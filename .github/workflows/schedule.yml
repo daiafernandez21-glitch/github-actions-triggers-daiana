@@ -1,0 +1,13 @@
+name: Schedule Workflow
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  mensaje-schedule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje schedule
+        run: echo "Ejecucion programada"

@@ -4,20 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       alerta:
-        description: Nivel de alerta
+        description: "Nivel de alerta"
         required: true
-        type: choice
-        options:
-          - baja
-          - media
-          - alta
+        default: "media"
 
 jobs:
   mensaje-dispatch:
     runs-on: ubuntu-latest
-
     steps:
       - name: Mostrar alerta
-       steps:
-  - name: Mostrar alerta
-    run: "echo Nivel seleccionado: ${{ inputs.alerta }}"
+        run: echo "Workflow ejecutado manualmente"
